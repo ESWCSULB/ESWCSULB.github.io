@@ -8,40 +8,81 @@
     font-family: 'Source Sans Pro', serif;
 }
 @font-face {
-    font-family: 'LeagueGothicRegular';
-    src: url('fonts/leaguegothic-regular-webfont.eot');
-    src: url('fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/leaguegothic-regular-webfont.woff') format('woff'),
-    url('fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
-    url('fonts/leaguegothic-regular-webfont.svg#LeagueGothicRegular') format('svg');
+    font-family: 'league_gothicregular';
+    src: url('../fonts/leaguegothic-regular-webfont-webfont.woff2') format('woff2'),
+    url('../fonts/leaguegothic-regular-webfont-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
+img{
+    width:100%;
+    height:auto;
+}
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.2fr 1fr 2fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 0.2fr 1fr 2fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
     /* the dots are meaningless areas to create whitespace*/
     grid-template-areas:
     ". main-logo . nav nav nav ."
         ". hero hero hero hero hero ."
         ". event event event big-item small-item ."
+        ". test test test test test ."
         ". footer footer footer footer footer .";
+    grid-column-gap:15px;
+    grid-row-gap:20px;
+    position:relative; /* hack needed to make links clickable*/
+    z-index:1; /* guess grids isn't magic after all */
 }
-
-h2 {
+#hero{
+}
+#herotext {
+    font-size: 24px;
     position: absolute;
-    top: 5%;
-    left: 45%;
+    top:37%;
+    left: 60%;
     width: 100%;
-    font-family: 'LeagueGothicRegular', 'Source Sans Pro', serif;
-    font-size: 150%;
+    color: #FFF;
+    opacity:0.8;
+    text-shadow: 2px 2px #B3B3B3;
 }
-
+.tagline{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.button {
+    position: relative;
+    width: 200px;
+    margin-left:55px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0px;
+    text-transform: uppercase;
+    color:#FFF;
+    font-weight: bold;
+    border: 3px solid #FFFFFF;
+    transition: all 0.3s linear;
+    border-radius:10px;
+    z-index:10;
+}
+.button:hover {
+    background-color: #FEFEFE;
+    color: #C4C4C4;
+    cursor: pointer;
+    text-shadow: none;
+}
+a:link,
+a:visited{
+    text-decoration:none;
+}
 #main-logo {
     grid-area: main-logo;
-    align-self: center;
+    padding-top: 20px; /* not really supposed to do this with grids */
 }
 
 /* --- Navigation Pane ---*/
@@ -132,24 +173,47 @@ nav ul ul ul {
     width: 100%;
 }
 
-#event {
+#design {
     grid-area: event;
-
+    position: relative;
+    text-align: center;
 }
 
-#big-item {
+.top-left {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-family: league_gothicregular;
+    font-size: 50px;
+    color: #26c63e;
+}
+#educate {
     grid-area: big-item;
+    position: relative;
+    text-align: center;
 }
 
-#small-item {
+#educate img{
+    
+}
+#build {
     grid-area: small-item;
+    position: relative;
+    text-align: center;
 }
 
 #footer {
     grid-area: footer;
 }
 
+#test {
+    grid-area:test;
+}
+
 @media (max-width: 1300px) {
+    #herotext{
+        left:40%;
+    }
 /* --- NAVIGATION PANE --- */
 nav ul li a {
     padding: 25px 5%; /* Prevents the "Contact Us"*/
