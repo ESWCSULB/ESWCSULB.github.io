@@ -1,4 +1,4 @@
-/* ESW CSULB 2017
+/* ESW CSULB 201A7OA
  * Webmaster: Jaap de Dood
  * Notes:
  */
@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', serif;
+    /* font size set to 0 to fix whitespace underneath images*/
+    /* set font-size for text in child*/
+    font-size: 0;
 }
 @font-face {
     font-family: 'league_gothicregular';
@@ -14,23 +17,30 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(http://fonts.gstatic.com/s/permanentmarker/v7/9vYsg5VgPHKK8SXYbf3sMsW72xVeg1938eUHStY_AJ4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
 img{
     width:100%;
     height:auto;
 }
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.2fr 1fr 2fr 2fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 0.4fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr 0.3fr 0.3fr;
     /* the dots are meaningless areas to create whitespace*/
     grid-template-areas:
-    ". main-logo . nav nav nav ."
-        ". hero hero hero hero hero ."
-        ". event event event big-item small-item ."
-        ". test test test test test ."
-        ". footer footer footer footer footer .";
+        ". main-logo nav nav nav nav nav ."
+        ". hero hero hero hero hero hero."
+        ". design design educate educate build build ."
+        ". info info info signup signup signup ."
+        "footer2 footer footer footer footer footer footer footer3";
     grid-column-gap:15px;
-    grid-row-gap:20px;
+    grid-row-gap:10px;
     position:relative; /* hack needed to make links clickable*/
     z-index:1; /* guess grids isn't magic after all */
 }
@@ -69,12 +79,14 @@ img{
     transition: all 0.3s linear;
     border-radius:10px;
     z-index:10;
+    font-size: 24px;
 }
 .button:hover {
     background-color: #FEFEFE;
     color: #C4C4C4;
     cursor: pointer;
     text-shadow: none;
+    font-size: 24px;
 }
 a:link,
 a:visited{
@@ -133,6 +145,7 @@ nav ul li a {
     display: block;
     padding: 25px 20px;
     text-decoration: none;
+    font-size: 16px;
 }
 
 nav ul ul {
@@ -144,20 +157,22 @@ nav ul ul {
     padding: 0;
     position: absolute;
     top: 95%;
+
 }
 
 nav ul ul li {
     float: none;
     position: relative;
-
 }
 
 nav ul ul li a {
     padding: 15px 40px;
     color: #B3B3B3;
+    font-size: 16px;
 }
 
 nav ul ul li a:hover {
+
 }
 
 nav ul ul ul {
@@ -174,36 +189,56 @@ nav ul ul ul {
 }
 
 #design {
-    grid-area: event;
+    grid-area: design;
     position: relative;
     text-align: center;
+    box-shadow: 3px 3px #B3B3B3;
 }
+
 
 .top-left {
     position: absolute;
     top: 10px;
     right: 16px;
-    font-family: league_gothicregular;
+    font-family: "Permanent Marker";
     font-size: 50px;
     color: #26c63e;
 }
 #educate {
-    grid-area: big-item;
+    grid-area: educate;
     position: relative;
-    text-align: center;
+    box-shadow: 3px 3px #B3B3B3;
 }
 
 #educate img{
-    
+    width:100%;
+    height:auto;
 }
 #build {
-    grid-area: small-item;
+    grid-area: build;
     position: relative;
     text-align: center;
+    box-shadow: 3px 3px #B3B3B3;
 }
-
+#info {
+    grid-area: info;
+    background-color: #171a2b;
+}
+#signup {
+    grid-area: signup;
+    background-color: #e6f0eb;
+}
 #footer {
     grid-area: footer;
+    background-color: #adb8b1;
+}
+#footer2 {
+    grid-area: footer2;
+    background-color: #adb8b1;
+}
+#footer3 {
+    grid-area: footer3;
+    background-color: #adb8b1;
 }
 
 #test {
@@ -212,6 +247,7 @@ nav ul ul ul {
 
 @media (max-width: 1300px) {
     #herotext{
+
         left:40%;
     }
 /* --- NAVIGATION PANE --- */
