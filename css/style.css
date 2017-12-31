@@ -1,4 +1,4 @@
-/* ESW CSULB 201A7OA
+/* ESW CSULB 2017
  * Webmaster: Jaap de Dood
  * Notes:
  */
@@ -8,8 +8,10 @@
     font-family: 'Source Sans Pro', serif;
     /* font size set to 0 to fix whitespace underneath images*/
     /* set font-size for text in child*/
-    font-size: 0;
+    font-size: 0; 
 }
+@import "compass/css3";
+
 @font-face {
     font-family: 'league_gothicregular';
     src: url('../fonts/leaguegothic-regular-webfont-webfont.woff2') format('woff2'),
@@ -32,19 +34,21 @@ img{
 }
 .grid {
     display: grid;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 0.4fr;
-    grid-template-rows: 0.3fr 1fr 0.3fr 0.3fr 0.3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr 0.3fr 0.3fr 0.3fr;
     /* the dots are meaningless areas to create whitespace*/
     grid-template-areas:
         ". main-logo nav nav nav nav nav ."
         ". hero hero hero hero hero hero."
         ". design design educate educate build build ."
-        ". info info info signup signup signup ."
+        ". info1 info1 info1 signup signup signup ."
+        ". info2 info2 info2 signup signup signup ."
         "footer2 footer footer footer footer footer footer footer3";
     grid-column-gap:15px;
     grid-row-gap:10px;
     position:relative; /* hack needed to make links clickable*/
     z-index:1; /* guess grids isn't magic after all */
+    background-color: #fafaf9;
 }
 #hero{
 }
@@ -83,6 +87,7 @@ img{
     z-index:10;
     font-size: 24px;
 }
+
 .button:hover {
     background-color: #FEFEFE;
     color: #C4C4C4;
@@ -104,6 +109,8 @@ nav {
     grid-area: nav;
     max-width: 100%;
     align-self: center;
+    background-color:#fff;
+    border-radius:11px;
 }
 
 nav ul ul {
@@ -222,41 +229,147 @@ nav ul ul ul {
     text-align: center;
     box-shadow: 3px 3px #B3B3B3;
 }
-#info {
-    grid-area: info;
+#info1 {
+    grid-area: info1;
     background-color: #171a2b;
+    text-align: center;
+    padding: 30px;
+    
+}
+#info1 a p{
+    font-family: 'league_gothicregular';
+    font-size:50px;
+    color:#21bf27;
+    margin: 0px 0px 0px;
+}
+#info1 a span{
+    color:#9ff4f5;
+    font-size:18px;
+}
+#info2 {
+    grid-area: info2;
+    background-color: #171a2b;
+    text-align: center;
+    padding: 30px;
+}
+#info2 a p{
+    font-family: 'league_gothicregular';
+    font-size:50px;
+    color:#21bf27;;
+    margin: 0 0 0;
+}
+#info2 a span{
+    color:#9ff4f5;
+    font-size:18px;
 }
 #signup {
     grid-area: signup;
-    background-color: #e6f0eb;
+    background-color: #fff;
 }
+form {
+    max-width: 500px;
+    margin: 20px auto 50px;
+    border-radius:2px;
+}
+h2 {
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align:center;
+    font-size:30px;
+    color:darken(#e5e5e5, 50%);
+    border-bottom:solid 1px #e5e5e5;
+}
+p {
+    margin: 0 0 3em 0;
+    position: relative;
+    font-size:10px;
+}
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 90%;
+    outline: none;
+    margin: 0 auto;
+    font-size:10px;
+}
+input[type="text"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 1.6em;
+    padding: .8em .5em;
+    border-radius: 2px;
+}
+input[type="text"]:focus {
+    background: #fff;
+    font-size: 1.6em;
+}
+input[type="submit"] {
+    background: #aaa;
+    box-shadow: 0 3px 0 0 darken(#aaa, 10%);
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    line-height: 1.6mm;
+    margin: 0 auto;
+    outline: none;
+    padding: .8em 0;
+    text-shadow: 0 1px #661;
+}
+input[type="submit"]:hover {
+    background: #26c63e;
+    text-shadow:0 1px 3px darken(#26c63e, 30%);
+}
+label{
+    position: absolute;
+    left: 40px;
+    top: 12px;
+    color: #999;
+    font-size:16px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    top:-11px;
+    background-color: #fff;
+}
+
 #footer {
-    grid-area: footer;
-    background-color: #adb8b1;
+     grid-area: footer;
+     background-color: #adb8b1;
+     font-size: 15px;
 }
-#footer2 {
-    grid-area: footer2;
-    background-color: #adb8b1;
+#sitemap-container {
+    margin: 0 auto;
+    float:none;
+    display:block;
 }
-#footer3 {
-    grid-area: footer3;
-    background-color: #adb8b1;
+#footer ul{
+    list-style:none;
+    display:block;
+    float:left;
+    padding: 10px;
 }
-
-#test {
-    grid-area:test;
+#footer h3 a{
+    font-weight: 100;
+    margin-bottom: 0;
+    font-size: 17px;
+    color:#fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.45);
 }
-
+#footer li a{
+    font-size:14px;
+    color:#737373;
+}
 @media (max-width: 1300px) {
     #herotext{
 
         left:40%;
     }
-/* --- NAVIGATION PANE --- */
 nav ul li a {
     padding: 25px 5%; /* Prevents the "Contact Us"*/
     /* field from wrapping to next line at small sizes*/
-/* --- END NAVIGATION PANE --- */
 }
 }
 /* Useful for grid troubleshooting: */
