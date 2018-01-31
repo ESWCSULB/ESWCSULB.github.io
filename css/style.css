@@ -1,4 +1,5 @@
-/* ESW CSULB 2017AOA
+/* ESW CSULB 2017
+
  * Webmaster: Jaap de Dood
  * Notes:
  */
@@ -60,7 +61,37 @@ img{
     url(../images/hero.jpg);
     background-size:cover;
     background-repeat: no-repeat;
-    padding: 15% 0;
+    padding: 10% 0;
+}
+#join {
+    position:relative;
+    width:300px;
+    margin: 0 auto;
+}
+#join img {
+    width:100%;
+}
+#join img:hover {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}        
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+#join span {
+    font-size: 32px;
+    position:absolute;
+    width:100%;
+    left:0px;
+    top: 120px;
+    color:#fff;
 }
 #herotext {
     font-size: 50px;
@@ -73,7 +104,7 @@ img{
     font-size: 30px;
     font-weight: lighter;
 }
-.button {
+/*.button {
     position: relative;
     width: 200px;
     margin:10px auto;
@@ -92,7 +123,7 @@ img{
     border-radius:10px;
     z-index:10;
     font-size: 24px;
-}
+}*/
 
 .button:hover {
     background-color: #FEFEFE;
