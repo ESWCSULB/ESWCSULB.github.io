@@ -70,6 +70,8 @@ img{
 }
 #join img {
     width:100%;
+    z-index: 2;
+    position: relative;
 }
 #join img:hover {
     animation-name: spin;
@@ -92,6 +94,7 @@ img{
     left:0px;
     top: 120px;
     color:#fff;
+    z-index: 1;
 }
 #herotext {
     font-size: 50px;
