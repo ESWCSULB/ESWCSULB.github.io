@@ -36,7 +36,7 @@ img{
 .grid {
     display: grid;
     grid-template-columns: 190px 190px 190px 190px 190px 190px 190px 190px;
-    grid-template-rows: 0.3fr 1.7fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.3fr 0.9fr 0.3fr 0.3fr 0.3fr 0.3fr;
     /* the dots are meaningless areas to create whitespace*/
     grid-template-areas:
         ". main-logo nav nav nav nav nav ."
@@ -418,7 +418,7 @@ label{
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 1.7fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.3fr 0.9fr 0.3fr 0.3fr 0.3fr 0.3fr;
 }
 .facebook {
     width: 50px;
