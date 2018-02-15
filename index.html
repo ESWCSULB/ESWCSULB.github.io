@@ -93,7 +93,7 @@
           </div>
       </div>
       <div id="signup">
-          <form action="#" method="post">
+          <form action="https://script.google.com/macros/s/AKfycbzuyY7MoMRjO5Jd7Alphy49BRvk7G2W2g78dRyGXc-l_HqcDoU/exec" method="POST" id="gform">
             <h2> Mailing List</h2>
             <p>
               <label for="Name" class="floatLabel">Name</label>
@@ -107,6 +107,10 @@
             </p>
           </form>
       </div>
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
       <div id="footer">
         <div id="sitemap-container">
           <ul>
@@ -155,6 +159,8 @@
 <h4>&copy;2016 - ESW CSULB</h4>
         </div>
     </div>
+<!-- Prevents the page from changing to the JSON result -->
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
   </body>
 </html>
-B
