@@ -4,19 +4,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <title></title>
   </head>
   <body>
     <div class="grid">
-      <div id="main-logo"><img src="images/main_logo4.png" style="width:100%; height:auto; margin-bottom:10px;"></div>
+      <div id="main-logo"><img src="/images/main_logo4.png" style="width:100%; height:auto; margin-bottom:10px;"></div>
       <!-- Navigation Pane-->
-<nav>
+      <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a>
+          <li><a href="#">About</a>
             <ul>
               <li><a href="/about/board/">Board</a></li>
               <!-- <li><a href="#">Project Leaders</a></li> -->
@@ -65,56 +65,10 @@
           <li><a href="/contact/">Contact Us</a></li>
         </ul>
       </nav>
-      <div id="hero">
-        <div id="herotext">Engineers for a Sustainable World<br /><span class="tagline">Long Beach Student Chapter</span>
-        <a href="#">
-          <a href="#signup"><div id="join"><!--<div class="button">Join Today</div> --> <img src="images/testerino.png"><span>Join Today</span></div></a>
-        </a></div>
-        </div>
-      <div id="design"> <img src="images/kiosk.jpg" style="height:auto; max-width:100%;"">
-        <div class="top-left"><a href="#">DESIGN</a></div>
-      </div>
-      <div id="educate"><img src="images/educate.jpg">
-        <div class="top-left"><a href="#">EDUCATE</a></div>
-      </div>
-      <div id="build"><img src="images/build.jpg" style="height:auto; max-width:100%;">
-        <div class="top-left"><a href="#">BUILD</a></div>
-      </div>
-      <div id="info1">
-          <div class="infocontainer">
-          <a href="#"><p>Events</p>
-          <span>Click here to view event schedule</span></a>
-          </div>
-      </div>
-      <div id="info2">
-          <div class="infocontainer">
-          <a href="#"><p>Donate</p>
-          <span>Our projects require funding in order to research, innovate, and reach its goals. Donations of any kind are always a big help and appreciated.</span></a>
-          </div>
-      </div>
-      <div id="signup">
-          <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzuyY7MoMRjO5Jd7Alphy49BRvk7G2W2g78dRyGXc-l_HqcDoU/exec">
-            <h2> Mailing List</h2>
-            <p>
-              <label for="name" class="floatLabel">Name</label>
-              <input id="name" name="name" type="text">
-            <p>
-              <label for="email" class="floatLabel">Email</label>
-              <input id="email" name="email" type="text">
-            </p>
-            <p>
-              <input type="submit" value="Subscribe" id="submit">
-            </p>
-          </form>
-      </div>
-  <div style="display:none;" id="thankyou_message">
-    <h2>Mailing List</h2>
-    <p>Thank you for signing up!</p>
-    <form id="resubmit">
-    <p>
-        <input type="submit" value="Submit New Response" id="submit">
-    </p>
-    </form>
+  <div id="content">
+    <h1 style="text-align:center;">About Engineers for a Sustainable World</h1>
+    <img src="/images/about.JPG">
+    
   </div>
       <div id="footer">
         <div id="sitemap-container">
