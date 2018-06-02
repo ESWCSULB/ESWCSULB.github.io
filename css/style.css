@@ -391,7 +391,40 @@ label{
     margin-left:auto;
     margin-right:auto;
 }
-
+.subtext{
+    font-size:18px;
+    width:100%;
+    text-align:center;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #26c63e;
+}
+.description p{
+    font-size:18px;
+    width:100%;
+    text-align:justify;
+    margin-bottom:30px;
+}
+.description ul li a{
+    font-size:18px;
+    display: table;
+    margin: 0 auto;
+    color:black;
+    text-decoration:underline;
+}
+.description ul li a:visited{
+    color:black;
+    text-decoration:underline;
+}
+.description a{
+    color:black;
+    text-decoration:underline;
+    font-size:18px;
+}
+.description a:visited{
+    color:black;
+    text-decoration:underline;
+}
 #content span{
     font-size: 18px;
 }
